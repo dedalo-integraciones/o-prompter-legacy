@@ -1,0 +1,112 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#000000">
+
+    <androidx.appcompat.widget.Toolbar
+        android:id="@+id/toolbar"
+        android:layout_width="match_parent"
+        android:layout_height="?attr/actionBarSize"
+        android:background="#111111"
+        android:theme="@style/ThemeOverlay.AppCompat.Dark.ActionBar"
+        app:popupTheme="@style/ThemeOverlay.AppCompat.Light" />
+
+    <LinearLayout
+        android:id="@+id/layoutNavigation"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/toolbar"
+        android:background="#222222"
+        android:orientation="horizontal"
+        android:gravity="center_vertical"
+        android:padding="8dp">
+
+        <Button
+            android:id="@+id/buttonPrevious"
+            android:layout_width="wrap_content"
+            android:layout_height="40dp"
+            android:background="#444444"
+            android:text="&lt; Anterior"
+            android:textColor="#FFFFFF"
+            android:textSize="13sp"
+            android:paddingLeft="12dp"
+            android:paddingRight="12dp" />
+
+        <TextView
+            android:id="@+id/textViewFileName"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:gravity="center"
+            android:text="O'Prompter"
+            android:textColor="#FFFFFF"
+            android:textSize="14sp"
+            android:textStyle="bold"
+            android:ellipsize="end"
+            android:maxLines="1"
+            android:paddingLeft="8dp"
+            android:paddingRight="8dp" />
+
+        <Button
+            android:id="@+id/buttonNext"
+            android:layout_width="wrap_content"
+            android:layout_height="40dp"
+            android:background="#444444"
+            android:text="Siguiente &gt;"
+            android:textColor="#FFFFFF"
+            android:textSize="13sp"
+            android:paddingLeft="12dp"
+            android:paddingRight="12dp" />
+
+    </LinearLayout>
+
+    <TextView
+        android:id="@+id/textViewTooltip"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/layoutNavigation"
+        android:background="#333333"
+        android:gravity="center"
+        android:padding="8dp"
+        android:text="Usa: *negrita* _cursiva_ ~tachado~ +subrayado+"
+        android:textColor="#FFFF00"
+        android:textSize="14sp"
+        android:visibility="gone" />
+
+    <ScrollView
+        android:id="@+id/scrollViewPrompter"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_below="@id/textViewTooltip"
+        android:fillViewport="true">
+
+        <EditText
+            android:id="@+id/editTextPrompter"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:padding="24dp"
+            android:background="@android:color/transparent"
+            android:inputType="textMultiLine|textCapSentences"
+            android:gravity="top|start"
+            android:text="Carga o escribe tu texto aquí."
+            android:textColor="#FFFFFF"
+            android:textSize="28sp"
+            android:lineSpacingMultiplier="1.2" />
+    </ScrollView>
+
+    <Button
+        android:id="@+id/buttonAdvance"
+        android:layout_width="64dp"
+        android:layout_height="64dp"
+        android:layout_alignParentBottom="true"
+        android:layout_alignParentRight="true"
+        android:layout_margin="24dp"
+        android:background="@drawable/circle_button"
+        android:text="▼"
+        android:textColor="#FFFFFF"
+        android:textSize="24sp"
+        android:padding="0dp" />
+
+</RelativeLayout>

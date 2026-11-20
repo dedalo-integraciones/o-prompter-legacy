@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+
+    <item
+        android:id="@+id/action_load"
+        android:title="Cargar desde OPrompter"
+        app:showAsAction="never" />
+
+    <item
+        android:id="@+id/action_load_external"
+        android:title="Cargar desde otra carpeta"
+        app:showAsAction="never" />
+
+    <item
+        android:id="@+id/action_edit"
+        android:title="Editar Texto"
+        app:showAsAction="never" />
+
+    <item
+        android:id="@+id/action_save"
+        android:title="Guardar archivo"
+        app:showAsAction="never" />
+
+    <item
+        android:id="@+id/action_exit"
+        android:title="Salir de la aplicación"
+        app:showAsAction="never" />
+
+</menu>
